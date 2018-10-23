@@ -7,14 +7,25 @@
             <h1><a href="/">Debbies Blog</a></h1>
             </div>
 
-            <div>
-                <p>published: 21.10.2018, 10:14</p>
-            <h2><a href="">My first post</a></h2>
+            {% for post in posts %}
+             <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>    
+                <p>{{ post.text|linebreaksbr }}</p>      
         </div>
-
+        {% endfor %}
+        
         <div>
-            <p>published: 21.10.2018, 10:15</p>
+            <p>published: 21.10.2018, 3:04</p>
             <h2><a href="">My second post</a></h2>
-        </div>
+            <p>God is not dead, his mercies endureth forever</p>
+            </div>
+
+            <div>
+                    <p>published: 22.10.2018, 12:02</p>
+                    <h2><a href="">My first post</a></h2>
+                    <p>you are the same yesterday today forever nobody is like you</p>
+            </div>
+
         </body>
         </html>
